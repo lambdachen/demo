@@ -1,7 +1,8 @@
 package com.example.demo.lang;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.junit.Test;
+
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -21,5 +22,17 @@ public class Main {
         ConcurrentMap<String, String> concurrentMap = new ConcurrentHashMap<>();
         concurrentMap.put(null, "aaa");
         System.out.println(concurrentMap.get(null));
+    }
+
+    @Test
+    public void test() throws Exception {
+
+    }
+
+    @Test
+    public void test1() throws Exception {
+        List<String> list = new ArrayList<>(Arrays.asList("a", "b"));
+        String[] array = list.toArray(new String[5]);
+        System.out.println(Arrays.toString(array));
     }
 }

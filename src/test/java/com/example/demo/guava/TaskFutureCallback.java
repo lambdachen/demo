@@ -22,7 +22,7 @@ public class TaskFutureCallback implements FutureCallback<String> {
 
     @Override
     public void onSuccess(@Nullable String result) {
-        System.out.println("callback successfully and the result is " + result + " and the current thread is " + Thread.currentThread().getName());
+        System.out.println("callback success and the result is " + result + ", and the current thread is " + Thread.currentThread().getName());
         listeningExecutorService.shutdown();
         executorService.shutdown();
     }
