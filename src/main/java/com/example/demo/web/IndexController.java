@@ -39,7 +39,7 @@ public class IndexController {
     }
 
     @ExceptionHandler({RuntimeException.class})
-    public String excep() {
+    public String exception() {
         return "occurred a exception";
     }
 }

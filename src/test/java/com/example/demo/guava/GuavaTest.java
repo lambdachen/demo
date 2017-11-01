@@ -1,7 +1,6 @@
 package com.example.demo.guava;
 
 import org.junit.Test;
-import org.springframework.util.DigestUtils;
 
 import java.io.File;
 
@@ -26,5 +25,17 @@ public class GuavaTest {
 
     @Test
     public void test2() throws Exception {
+        String s = "a";
+        switch (s) {
+            case "a":
+                System.out.println("a");
+            case "b":
+                System.out.println("b");
+            case "c":
+                System.out.println("c");
+            default:
+                System.out.println("none");
+        }
     }
+
 }

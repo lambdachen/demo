@@ -41,14 +41,15 @@ public class ToCollect {
     public void test3() throws Exception {
         final CountDownLatch latch = new CountDownLatch(1);
         new Thread(() -> {
-            System.out.println("the thread " + Thread.currentThread().getName() + " begin");
             try {
+                System.out.println("the thread " + Thread.currentThread().getName() + " begin");
                 Thread.sleep(3000);
-            } catch (InterruptedException e) {
+                System.out.println("the thread " + Thread.currentThread().getName() + " end");
+            } catch (Exception e) {
                 e.printStackTrace();
+            } finally {
+                latch.countDown();
             }
-            System.out.println("the thread " + Thread.currentThread().getName() + " end");
-            latch.countDown();
         }).start();
         latch.await();
         System.out.println(Thread.currentThread().getName());
